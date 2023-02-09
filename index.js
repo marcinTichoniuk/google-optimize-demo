@@ -9,9 +9,13 @@ gtag('event', 'experiment_impression', {
   send_to: 'G-0C961JB7GE',
 });
 
-const pElement = document.querySelector('p');
-if (variantId === 0) {
-  pElement.textContent = 'original variant';
-} else {
-  pElement.textContent = 'second variant';
-}
+addEventListener('DOMContentLoaded', () => {
+  const pElement = document.querySelector('p');
+  console.log(pElement);
+  console.log(variantId);
+  if (variantId === 0) {
+    pElement.textContent = 'original variant';
+  } else {
+    pElement.textContent = 'second variant';
+  }
+});
